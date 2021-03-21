@@ -4,5 +4,4 @@ class Wine < ApplicationRecord
     accepts_nested_attributes_for :wine_strains, reject_if: :all_blank, allow_destroy: true
     accepts_nested_attributes_for :strains, reject_if: :all_blank, allow_destroy: true
     validates :name, presence: true
-    validates :year, presence: true
 end

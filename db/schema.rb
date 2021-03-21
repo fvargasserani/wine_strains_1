@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_012531) do
+ActiveRecord::Schema.define(version: 2021_03_21_165750) do
 
   create_table "strains", force: :cascade do |t|
     t.string "name"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2021_03_19_012531) do
   create_table "wines", force: :cascade do |t|
     t.string "name"
     t.integer "year"
-    t.boolean "assembly"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

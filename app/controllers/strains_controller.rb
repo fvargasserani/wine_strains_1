@@ -13,6 +13,7 @@ class StrainsController < ApplicationController
   # GET /strains/new
   def new
     @strain = Strain.new
+    @strains = Strain.all.order(:name)
   end
 
   # GET /strains/1/edit
@@ -64,6 +65,6 @@ class StrainsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def strain_params
-      params.require(:strain).permit(:name, :percentage)
+      params.require(:strain).permit(:name)
     end
 end
