@@ -1,3 +1,4 @@
+<h3>Wine:</h3>
 <%= form_with(model: wine, local: true) do |form| %>
   <% if wine.errors.any? %>
     <div id="error_explanation">
@@ -26,17 +27,17 @@
     <%= form.check_box :assembly %>
   </div>
 
-  Strains:
-  <ul>
-  <%= form.fields_for :strains do |strains_form| %>
-    <li>
-      <%= strains_form.label :name %>
-      <%= strains_form.text_field :name %>
-      <%= strains_form.link_to_add "Add more", :foobar, :class => "nested_add" %>
-    </li>
-  <% end %>
-  </ul>
-
+  <h3>Strains:</h3>
+  <div id='strains'>
+    <%= form.fields_for :strains do |strain| %>
+      <%= render 'strain_fields', :f => strain %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'Add strain', form, :strains %>
+    </div>
+  </div>    
+  <br>
+  
   <div class="actions">
     <%= form.submit %>
   </div>
