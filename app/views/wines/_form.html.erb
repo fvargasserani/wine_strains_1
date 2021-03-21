@@ -24,13 +24,14 @@
 
   <h3>Strains:</h3>
   <div id='wine_strains'>
-    <%= form.fields_for :winestrains do |wine_strain_form| %>
+    <%= form.fields_for :wines_strains do |wine_strain_form| %>
       <%= render 'wine_strain_fields', :f => wine_strain_form %>
     <% end %>
     <div class='links'>
       <%= link_to_add_association 'Add strain', form, :wine_strains %>
     </div>
-  </div>    
+  </div> 
+
   <br>
   
   <div class="actions">

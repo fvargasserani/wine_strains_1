@@ -4,6 +4,7 @@ class WinesController < ApplicationController
   # GET /wines or /wines.json
   def index
     @wines = Wine.all
+    @wine_strains = WineStrain.where(wine_id: :id)
   end
 
   # GET /wines/1 or /wines/1.json
@@ -13,7 +14,6 @@ class WinesController < ApplicationController
   # GET /wines/new
   def new
     @wine = Wine.new
-    @wine.strains.build
     @strains = Strain.all.order(:name)
   end
 
@@ -24,6 +24,7 @@ class WinesController < ApplicationController
   # POST /wines or /wines.json
   def create
     @wine = Wine.new(wine_params)
+    @strains = Strain.all
 
     respond_to do |format|
       if @wine.save
@@ -66,6 +67,6 @@ class WinesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wine_params
-      params.require(:wine).permit(:name, :year, strains_attributes: [:name, :id, :_destroy], wine_strains_attributes: [:id, :wine_id, :strain_id, :_destroy])
+      params.require(:wine).permit(:name, :year, wine_strains_attributes: [:id, :wine_id, :strain_id, :percentage, :_destroy])
     end
 end
