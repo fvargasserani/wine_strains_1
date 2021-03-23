@@ -1,6 +1,6 @@
-<div class='nested-fields'>
-<%= f.label :name %>    
+<div class='nested-fields'>   
 <div class="field">
+    <%= f.label :name %> 
     <select name="wine[strain_id]">
         <%= @strains.each do |strain| %>
             <option value="<%= strain.id %>">
@@ -9,6 +9,8 @@
         <% end %> 
     </select>
 </div>
-<%= f.label :percentage %> 
-<%= f.number_field :percentage, step: :any %>
+<div class="field">
+    <%= f.label :percentage %> 
+    <%= f.number_field :percentage, step: :any %>
+</div>
 </div>
