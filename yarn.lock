@@ -1959,6 +1959,15 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
+cocoon-js-vanilla@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cocoon-js-vanilla/-/cocoon-js-vanilla-1.1.0.tgz#bd468445198a1e6ff217305418b496e1dc0e08a7"
+  integrity sha512-tCeS8x1Mpdt7C+0eA/ZcPOd+W970to7ziAqirGHPlSkQ490fY5JzV94h66ipaF4aLe7vQ3gtSFlb+1AvM80Bpw==
+
+"cocoon@github:nathanvda/cocoon#c24ba53":
+  version "1.2.10"
+  resolved "https://codeload.github.com/nathanvda/cocoon/tar.gz/c24ba53b40e688e7d8b7212824139ec7f352a242"
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
