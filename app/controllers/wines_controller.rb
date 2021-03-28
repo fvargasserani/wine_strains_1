@@ -25,6 +25,7 @@ class WinesController < ApplicationController
   def create
     @wine = Wine.new(wine_params)
     @strains = Strain.all
+    @wine.strains << @strains
 
     respond_to do |format|
       if @wine.save
